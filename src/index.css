@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 10% 92%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 200 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 25% 20%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 200 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 200 85% 50%;
+
+    --radius: 0.5rem;
+
+    --calendar-today: 200 85% 50%;
+    --calendar-today-foreground: 0 0% 100%;
+    --calendar-selected: 200 85% 50%;
+    --calendar-selected-foreground: 0 0% 100%;
+    --calendar-range: 200 85% 50% / 0.12;
+    --calendar-hover: 200 85% 50% / 0.08;
+    --calendar-holiday: 0 75% 55%;
+    --calendar-weekend: 200 85% 50%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .calendar-paper {
+    background: hsl(0 0% 100%);
+    box-shadow:
+      0 2px 8px rgba(0,0,0,0.08),
+      0 12px 40px rgba(0,0,0,0.12),
+      0 30px 60px rgba(0,0,0,0.06);
+  }
+}
+
+@layer utilities {
+  .calendar-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+}
